@@ -35,6 +35,8 @@ group :development, :test do
   gem 'rspec-rails', '~> 4.0', '>= 4.0.1'
   # factory bot rails for test data creation
   gem 'factory_bot_rails', '~> 6.1'
+  # capybara for simulating users used of website
+  gem 'capybara', '~> 3.33'
 end
 
 group :development do
