@@ -41,6 +41,8 @@ group :development, :test do
   gem 'factory_bot_rails', '~> 6.1'
   # capybara for simulating users used of website
   gem 'capybara', '~> 3.33'
+  # rails-controller-testing
+  gem 'rails-controller-testing'
 end
 
 group :test do
