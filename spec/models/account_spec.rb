@@ -1,5 +1,23 @@
 require 'rails_helper'
 
-# RSpec.describe Account, type: :model do
-#   pending "add some examples to (or delete) #{__FILE__}"
-# end
+RSpec.describe Account, type: :model do
+  describe 'validation' do
+    let(:account) { FactoryBot.build(:account) }
+    it 'should have a username' do
+      account.username = nil
+      expect(account).to_not be_valid
+    end
+    it 'should have a first name' do
+      account.first_name = nil
+      expect(account).to_not be_valid
+    end
+    it 'should have a last name' do
+      account.last_name = nil
+      expect(account).to_not be_valid
+    end
+    it 'should have an email' do
+      account.email = nil
+      expect(account).to_not be_valid
+    end
+  end
+end
