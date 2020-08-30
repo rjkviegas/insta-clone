@@ -36,4 +36,4 @@ yarn-debug.log*
 .yarn-integrity
 
 # Ignore simplecov coverage reports
-echo "coverage" >> .gitignore
+coverage
