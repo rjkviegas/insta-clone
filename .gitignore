@@ -37,3 +37,5 @@ yarn-debug.log*
 
 # Ignore simplecov coverage reports
 coverage
+
+application.yml

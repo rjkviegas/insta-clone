@@ -1,0 +1,10 @@
+<%= form_for @post, html: { multipart: true } do |f| %>
+
+  <%= f.file_field :image %>
+  <%= f.hidden_field :image_cache %><br>
+
+  Caption: <%= f.text_field :caption %><br><br>
+
+  <%= f.submit 'Create Post', class: 'btn btn-primary' %>
+
+<% end %>

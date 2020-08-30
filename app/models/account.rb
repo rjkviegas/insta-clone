@@ -5,4 +5,6 @@ class Account < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates :username, :first_name, :last_name, presence: true, length: { maximum: 20 }
+
+  has_many :posts
 end

@@ -28,8 +28,13 @@ gem 'jquery-rails', '~> 4.4'
 # flexible authentication solution for Rails with Warden
 gem 'devise', '~> 4.7', '>= 4.7.2'
 
-# Use Active Storage variant
-# gem 'image_processing', '~> 1.2'
+# image storage
+gem 'carrierwave', '~> 2.1'
+gem 'fog', '~> 2.2'
+gem "fog-aws"
+
+# image resizing
+gem 'mini_magick', '~> 4.10', '>= 4.10.1'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
@@ -62,6 +67,9 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+
+  # local ENV vars
+  gem 'figaro', '~> 1.2'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

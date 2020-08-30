@@ -32,4 +32,8 @@ RSpec.feature 'User registration' do
     sign_up
     expect(page).to have_content('Welcome! You have signed up successfully.')
   end
+  scenario 'sign up directs to dashboard' do
+    sign_up
+    expect(current_path).to be('/dashboard')
+  end
 end
