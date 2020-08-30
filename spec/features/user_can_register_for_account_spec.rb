@@ -36,4 +36,15 @@ RSpec.feature 'User registration' do
     expect(Account.first.email).to eq('test@test.com')
   end
 
+  scenario 'account creation notification' do
+    visit '/accounts/sign_up'
+    fill_in 'account[username]', with: 'testname'
+    fill_in 'account[first_name]', with: 'test'
+    fill_in 'account[last_name]', with: 'name'
+    fill_in 'account[email]', with: 'test@test.com'
+    fill_in 'account[password]', with: '123456'
+    fill_in 'account[password_confirmation]', with: '123456'
+    click_button 'Sign up'
+    expect(page).to have_content('Welcome! You have signed up successfully.')
+  end
 end
