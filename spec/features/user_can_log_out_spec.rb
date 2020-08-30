@@ -5,7 +5,7 @@ RSpec.feature 'User log out' do
     sign_up
     expect(page).to have_link('Log out')
   end
-  scenario 'log out link visible only when signed in' do
+  scenario 'log out link not visible when not signed in' do
     visit '/'
     expect(page).to_not have_link('Log out')
   end

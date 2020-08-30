@@ -9,8 +9,6 @@ gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
-# Sass powered verison of Bootstrap 3
-gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
@@ -21,6 +19,10 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
+# Bootstrap
+gem 'bootstrap', '~> 4.5', '>= 4.5.2'
+# jquery for rails
+gem 'jquery-rails', '~> 4.4'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 # flexible authentication solution for Rails with Warden
