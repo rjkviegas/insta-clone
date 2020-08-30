@@ -4,5 +4,5 @@ class Account < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  validates :username, presence: true
+  validates :username, :first_name, presence: true
 end
