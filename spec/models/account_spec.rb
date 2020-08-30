@@ -7,24 +7,18 @@ RSpec.describe Account, type: :model do
       account.username = nil
       expect(account).to_not be_valid
     end
-<<<<<<< HEAD
     # it 'username length <= 20 chars' do
     #   account.username = 'TwentyPlusCharacterUserName'
     #   expect(account).to_not be_valid
     # end
-=======
->>>>>>> 7dce7085587aa5d5077e62b5bf6c684b00827bc5
     it 'should have a first name' do
       account.first_name = nil
       expect(account).to_not be_valid
     end
-<<<<<<< HEAD
     # it 'first name length <= 20 chars' do
     #   account.first_name = 'Terry'
     #   expect(account).to be_valid
     # end
-=======
->>>>>>> 7dce7085587aa5d5077e62b5bf6c684b00827bc5
     it 'should have a last name' do
       account.last_name = nil
       expect(account).to_not be_valid
