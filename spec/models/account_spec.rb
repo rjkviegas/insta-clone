@@ -23,9 +23,9 @@ RSpec.describe Account, type: :model do
       account.last_name = nil
       expect(account).to_not be_valid
     end
-    # it 'should have an email' do
-    #   account.email = nil
-    #   expect(account).to_not be_valid
-    # end
+    it 'should have an email' do
+      account.email = nil
+      expect(account).to_not be_valid
+    end
   end
 end
