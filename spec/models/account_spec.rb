@@ -19,10 +19,10 @@ RSpec.describe Account, type: :model do
     #   account.first_name = 'Terry'
     #   expect(account).to be_valid
     # end
-    # it 'should have a last name' do
-    #   account.last_name = nil
-    #   expect(account).to_not be_valid
-    # end
+    it 'should have a last name' do
+      account.last_name = nil
+      expect(account).to_not be_valid
+    end
     # it 'should have an email' do
     #   account.email = nil
     #   expect(account).to_not be_valid
