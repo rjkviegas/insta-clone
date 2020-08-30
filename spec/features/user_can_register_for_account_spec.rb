@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.feature 'User registration' do
-  
   scenario 'link on homepage' do
     visit '/'
     expect(page).to have_link('Sign up')
@@ -21,14 +20,7 @@ RSpec.feature 'User registration' do
   end
 
   scenario 'account creation' do
-    visit '/accounts/sign_up'
-    fill_in 'account[username]', with: 'testname'
-    fill_in 'account[first_name]', with: 'test'
-    fill_in 'account[last_name]', with: 'name'
-    fill_in 'account[email]', with: 'test@test.com'
-    fill_in 'account[password]', with: '123456'
-    fill_in 'account[password_confirmation]', with: '123456'
-    click_button 'Sign up'
+    sign_up
     expect(Account.count).to eq(1)
     expect(Account.first.username).to eq('testname')
     expect(Account.first.first_name).to eq('test')
@@ -37,14 +29,7 @@ RSpec.feature 'User registration' do
   end
 
   scenario 'account creation notification' do
-    visit '/accounts/sign_up'
-    fill_in 'account[username]', with: 'testname'
-    fill_in 'account[first_name]', with: 'test'
-    fill_in 'account[last_name]', with: 'name'
-    fill_in 'account[email]', with: 'test@test.com'
-    fill_in 'account[password]', with: '123456'
-    fill_in 'account[password_confirmation]', with: '123456'
-    click_button 'Sign up'
+    sign_up
     expect(page).to have_content('Welcome! You have signed up successfully.')
   end
 end
