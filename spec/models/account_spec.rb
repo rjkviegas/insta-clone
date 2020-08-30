@@ -31,5 +31,9 @@ RSpec.describe Account, type: :model do
       account.email = nil
       expect(account).to_not be_valid
     end
+    it 'email has to include atleast 1 @' do
+      account.email = 'noatsignemailaddress.com'
+      expect(account).to_not be_valid
+    end
   end
 end
