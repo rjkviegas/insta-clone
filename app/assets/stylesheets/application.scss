@@ -1,1 +1,21 @@
 @import 'bootstrap/scss/bootstrap';
+
+body {
+  background: #fafafa;
+}
+.post-meta {
+  background: #ffffff;
+  text-align: left;
+  font-weight: bold;
+  padding: 8px;
+  border: 1px solid #dddddd;
+}
+.log-in-meta {
+  background: #ffffff;
+  text-align: center;
+  font-weight: bolder;
+  padding: 12px;
+}
+.post-multi {
+  margin-bottom: 10px;
+}
