@@ -5,6 +5,8 @@ class Post < ApplicationRecord
 
   scope :active, -> { where active: true }
 
+  validates :image, presence: true 
+
   def set_active
     self.active = true
   end
