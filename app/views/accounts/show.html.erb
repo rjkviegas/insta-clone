@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <div class="col-8 text-left">
+      <h2>Hello <%= @account.first_name %></h2>
+      <h4><%= @account.username %></h4>
+      <h4><%= @account.email %></h4>
+      <h4><%= @account.posts.count %> posts</h4>
+      <%= link_to 'Edit Account Info', edit_account_registration_path, class: "btn btn-secondary" %>
+    </div>
+    <div class="row">
+    <% @posts.each do |post| %>
+      <div class="col-4">
+        <div class="post-multi">
+          <div class="log-in-meta">
+            <%= image_tag post.image.url, class: "img img-fluid" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+    </div>
+  </div>
+</div>
+
+

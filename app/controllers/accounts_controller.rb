@@ -8,5 +8,7 @@ class AccountsController < ApplicationController
 
   def show
     # user profile
+    @account = Account.find_by_username(params[:username])
+    @posts = @account.posts.active
   end
 end
