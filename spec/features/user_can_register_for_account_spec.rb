@@ -34,6 +34,6 @@ RSpec.feature 'User registration' do
   end
   scenario 'sign up directs to dashboard' do
     sign_up
-    expect(current_path).to be('/dashboard')
+    expect(current_path).to eq('/dashboard')
   end
 end

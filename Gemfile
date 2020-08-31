@@ -30,7 +30,6 @@ gem 'devise', '~> 4.7', '>= 4.7.2'
 
 # image storage
 gem 'carrierwave', '~> 2.1'
-gem 'fog', '~> 2.2'
 gem "fog-aws"
 
 # image resizing

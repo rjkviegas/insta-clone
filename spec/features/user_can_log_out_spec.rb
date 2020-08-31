@@ -7,6 +7,6 @@ RSpec.feature 'User log out' do
   end
   scenario 'log out link visible for newly registered user' do
     sign_up
-    expect(page).to have_link('Log out')
+    expect(page).to have_link('Log Out')
   end
 end
