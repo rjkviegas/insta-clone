@@ -9,4 +9,9 @@ RSpec.feature 'User log out' do
     sign_up
     expect(page).to have_link('Log Out')
   end
+  scenario 'log out link logs current user out' do
+    sign_up
+    click_link('Log Out')
+    expect(page).to have_content('Log out successful.')
+  end
 end
